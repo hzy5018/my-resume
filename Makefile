@@ -6,21 +6,22 @@ all: clean pdf
 clean-en: clean xelatex resume.tex
 clean-zh: clean xelatex resume-cn.tex
 en: resume.pdf
-  xelatex resume.tex
+	xelatex resume.tex
 zh: resume-cn.pdf
-  xelatex resume-cn.tex
+	xelatex resume-cn.tex
 ap: resume-ap.pdf
-  xelatex resume-ap.tex
+	xelatex resume-ap.tex
 pdf: clean $(PDFS)
 %.pdf: %.tex
-  xelatex $<
+	xelatex $<
+
 ifeq ($(OS),Windows_NT)
   # on Windows
   RM = cmd //C del
 else
   # on Unix/Linux
   RM = rm -f
-endif:
+endif
 
 clean:
-  $(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
