@@ -31,17 +31,20 @@
 数学模型，数值分析，运筹学，图论，金融工程
 
 \section{\faUsers\ 工作经验}
-\datedsubsection{\textbf{锋涛资产管理有限公司} 上海}{2018.01 -- 现在}
+\datedsubsection{\textbf{数灏智能科技有限公司}}{2018.01 -- 现在}
 \role{数据科学家}{}
+\begin{onehalfspacing}
 \begin{itemize}
-  \item 构建、评估、部署债券违约模型，并将模型准确率提高到80\%, KS 值提高到45.
-  \item 研究量化金融基本面机器学习模型，并且构建、评估、部署债券、宏观、大宗商品、行业、个股机器学习模型.
-  \item 设计Web产品API，线上产品系统
-  \item 设计、构建实时流处理模块，使其能进行数据清洗，转化，进一步计算特征并且进行模型预测.	  
+  \item 构建、评估、部署债券违约模型，并将模型准确率提高到80\%, KS 值提高到45；并且开发债券违约模型数据API，对外提供债券违约模型服务
+  \item 应用机器学习于基本面分析：（1）筛选对标的资产有重要影响的因子；（2）预测标的资产未来趋势	 
+  \item 构建财务造假模型：（1）计算财务指标；（2）判断财务报表是否造假；对外提供财务指标API和财务报表造假模型服务API，供用户使用	  
+  \item 构建财务模型，包含估值、情绪等模型；并API服务化，对外提供数据模型服务
+  \item 构建债券、宏观、大宗商品、行业、个股因子筛选模型（Lasso、ElasticNet、RandomForest）；并且建立相应的web api，对外提供数据模型服务.	  
 \end{itemize}
+\end{onehalfspacing}
 
 \datedsubsection{\textbf{上海行邑信息科技有限公司}}{2016.03 -- 2018.01}
-\role{数据科学家}{}
+\role{数据挖掘工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
   \item 作为团队负责人，负责某国企反欺诈数据挖掘项目，项目目的主要是验证该公司数据能够用于机器学习，并且该项目通过客户公司验收. 主要子项目如下:
@@ -76,15 +79,53 @@
 %  \item main contribution
 %\end{itemize}
 
+\section{\faUsers\ 项目经验}
+\datedsubsection{\textbf{反欺诈咨询项目}}{上海行邑科技有限公司(2017.10--2018.01)}
+\role{项目角色：负责人}{}
+项目介绍：上海某国企征信公司（甲方）计划开发平台征信数据，为平台内p2p、现金贷、小额贷款公司提供反欺诈服务。由我司进行反欺诈数据挖掘服务的可行性研究，
+论证该平台数据能够用于反欺诈，能够开发出相应的反欺诈服务产品。论证内容主要有：1）数据质量是否能够支撑数据反欺诈服务；2）评分卡模型可行性；
+3）图挖掘模型可行性，论证是否能够选取合适字段，构造网络
+\\[2pt]
+\begin{onehalfspacing}
+主要子项目如下：
+  \begin{itemize}
+     \item 数据清洗与融合分析
+     \item 数据质量评估	     
+     \item 标注样本数据
+     \item 特征工程
+     \item 图挖掘或网络挖掘: 构建异构网络、同构网络；在同构网络上，应用PageRank算法；构建网络的一度、二度特征
+     \item 构建基于Logistic Regression的评分卡模型
+  \end{itemize}
+\end{onehalfspacing}
+
+项目通过甲方企业的中期验收以及最终项目验收.
+\datedsubsection{\textbf{关联图谱系统项目}}{自研项目(2018.10--现在)}
+\role{项目角色：拥有者及负责人}{}
+项目介绍：
+关联图谱基于图数据库建立关系网络图，是一种可视化的智能分析产品。通过数据抽取和转换，图计算引擎对数据进行查询和分析，
+实现秒级数据运算和数据可视化，并以图谱的形式展示给用户的图形分析工具。用户可以基于已建好的图谱进行查询、分析和探索。
+从功能上，分为图分析和图计算。图分析主要基于图数据库（janusgraph），提供在线实时分析；图计算利用分布式计算框架（Spark GraphX），计算全图
+的PageRank和社团，同时计算节点的一度特征、二度特征计算。
+\\[2pt]
+\begin{onehalfspacing}
+主要子模块如下：
+\begin{itemize}
+  \item 数据集成：开发图生成协议，适配用户数据.
+  \item 在线分析模块：基于图数据库，进行在线实时分析.
+  \item 离线分析模块:用Spark GraphX 图计算：主要包括社团发现，PageRank；用hive进行预计算，统计图特征.    
+  \item 系统管理模块：用户管理、权限管理等.
+\end{itemize}
+\end{onehalfspacing}
+
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 编程语言: HQL(Hive SQL)/SQL, Python(Numpy,Scipy,Matplotlib,Seaborn, Pandas), R, Scala/Java, Go, C++/C.
   \item 熟悉机器学习算法，监督学习：LASSO，LAR，Logistic Regression，朴素贝叶斯，决策树，随机森林，KNN，SVM，Xgboost, 神经网络；无监督学习：K-Means, PCA，GMM(Gaussian Mixture Model)，HMM(Hidden Markov Model), 层次聚类，异常监测；时间序列分析等
-  \item 熟悉关系型数据库: SQL Server 2008, Mysql, No-sql: MongoDB, 图数据库: Neo4j, 内存数据库: Redis	  
+  \item 熟悉关系型数据库: SQL Server 2008, Mysql, No-sql: MongoDB, 图数据库: Neo4j, janusgraph, hugegraph, 内存数据库: Redis	  
   \item 熟悉分布式计算，熟练分析平台Hadoop，Spark
   \item 熟悉神经网络计算平台，如tensorflow, mxnet	  
-  \item 平台: Linux
+  \item 平台: Linux, Docker
   \item 开发: Spark, Web Service
 \end{itemize}
 
