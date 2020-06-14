@@ -10,6 +10,13 @@
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
 
+
+% \setlist[itemize,1]{label=$\times$}
+% \setlist[itemize,2]{label=$\checkmark$}
+% \setlist[itemize,3]{label=$\diamond$}
+% \setlist[itemize,4]{label=$\bullet$}
+
+
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
@@ -31,15 +38,27 @@
 数学模型，数值分析，运筹学，图论，金融工程
 
 \section{\faUsers\ 工作经验}
-\datedsubsection{\textbf{数灏智能科技有限公司}}{2018.01 -- 现在}
-\role{数据科学家}{}
+\datedsubsection{\textbf{口碑（杭州）技术有限公司}}{2019.05至今}
+\role{资深数据分析师}{}
+\begin{onehalfspacing}
+  \begin{itemize}
+    \item 旺铺售卖模型:
+    \item 搜索推荐优化分析：
+    \item 内容优化分析：
+    \item 数据产品：
+  \end{itemize}
+\end{onehalfspacing}
+
+
+\datedsubsection{\textbf{数灏智能科技有限公司}}{2018.01 -- 2019.03}
+\role{算法工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 构建、评估、部署债券违约模型，并将模型准确率提高到80\%, KS 值提高到45；并且开发债券违约模型数据API，对外提供债券违约模型服务
-  \item 应用机器学习于基本面分析：（1）筛选对标的资产有重要影响的因子；（2）预测标的资产未来趋势	 
-  \item 构建财务造假模型：（1）计算财务指标；（2）判断财务报表是否造假；对外提供财务指标API和财务报表造假模型服务API，供用户使用	  
-  \item 构建财务模型，包含估值、情绪等模型；并API服务化，对外提供数据模型服务
-  \item 构建债券、宏观、大宗商品、行业、个股因子筛选模型（Lasso、ElasticNet、RandomForest）；并且建立相应的web api，对外提供数据模型服务.	  
+  \item 债券违约模型：（1）从0到1构建债券违约特征工程；（2）用tensorflow实现债券违约统计模型；（3）以随机森林作为基线模型，构造债券违约机器学习模型；（4）模型准确率提高到80\%, KS 值提高到45；
+  \item 多因子模型：（1）构建资产的影响因子数据库；（2）用Lasso、随机森林，筛选对于资产比较重要的因子；	 
+  \item 财务造假模型：（1）构建财务指标体系以及指标库；（2）异常分析， 用isolate forest算法检测财务造假数据点；（3）以模型调用API的方式，为券商提供数据服务；
+  % \item 构建财务模型，包含估值、情绪等模型；并API服务化，对外提供数据模型服务
+  % \item 构建债券、宏观、大宗商品、行业、个股因子筛选模型（Lasso、ElasticNet、RandomForest）；并且建立相应的web api，对外提供数据模型服务.	  
 \end{itemize}
 \end{onehalfspacing}
 
@@ -47,17 +66,27 @@
 \role{数据挖掘工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 作为团队负责人，负责某国企反欺诈数据挖掘项目，项目目的主要是验证该公司数据能够用于机器学习，并且该项目通过客户公司验收. 主要子项目如下:
+  \item \textbf{某国企反欺诈数据挖掘项目}：该公司反欺诈服务可行性分析，\textbf{并且该项目通过客户公司验收}。上海某国企征信公司（甲方）计划开发平台征信数据，为平台内p2p、现金贷、小额贷款公司提供反欺诈服务。由我司进行反欺诈数据挖掘服务的可行性研究，
+  论证该平台数据能够用于反欺诈，能够开发出相应的反欺诈服务产品。论证内容主要有：1）数据质量是否能够支撑数据反欺诈服务；2）评分卡模型可行性；
+  3）图挖掘模型可行性，论证是否能够选取合适字段，构造网络. 主要子项目如下:
   \begin{itemize}
-     \item 数据清洗与融合分析
-     \item 特征工程
-     \item 图挖掘或网络挖掘: 构建异构网络、同构网络；在同构网络上，应用PageRank算法；构建网络的一度、二度特征
-     \item 构建基于Logistic Regression的评分卡模型
+     \item[*] ETL与特征工程
+     \item[*] 图挖掘或网络挖掘模型: （1）构建异构网络、同构网络；（2）在同构网络上，应用PageRank算法；（3）构建网络的一度、二度模型
+     \item[*] 社团挖掘：基于社团挖掘算法Louvain算法，构造P2P金融反欺诈团伙欺诈模式挖掘模型    
+     \item[*] 评分卡模型：（1）以Logistic Regression为基础，建立评分卡模型；（2）模型AUC = 0.8， K-S值为45\%
   \end{itemize}	
-  \item 重新为POC(Proof of Concept)设计DFP(Device FingerPrint: 设备指纹) 算法，使其满足POC要求: 准确率达到100\%.
-  \item 改进生产系统设备指纹算法, 调整DFP(Device FingerPrint: 设备指纹) 算法参数，并且开发DFP(Device FingerPrint: 设备指纹)模型算法部分.
-  \item 设计某游戏公司防代充模型，并且达到95\% 准确率， 为该公司减少5\%坏账率.
-  \item 设计ETL(Etract, Transform, Load) 系统，并且实现数据可视化功能，以提高售前、销售部门的效率.	  
+  \item {\textbf{关联图谱系统项目}}:关联图谱基于图数据库建立关系网络图，是一种可视化的智能分析产品。通过数据抽取和转换，图计算引擎对数据进行查询和分析，
+实现秒级数据运算和数据可视化，并以图谱的形式展示给用户的图形分析工具。用户可以基于已建好的图谱进行查询、分析和探索。
+从功能上，分为图分析和图计算。图分析主要基于图数据库（janusgraph），提供在线实时分析；图计算利用分布式计算框架（Spark GraphX），计算全图
+的PageRank和社团，同时计算节点的一度特征、二度特征计算。主要子模块如下：
+\begin{itemize}
+  \item[*] 数据集成：开发图生成协议，适配用户数据.
+  \item[*] 在线分析模块：基于图数据库，进行在线实时分析.
+  \item[*] 离线分析模块:用Spark GraphX 图计算：主要包括社团发现(Louvain算法)，PageRank；用hive进行预计算，统计图特征.    
+  \item[*] 系统管理模块：用户管理、权限管理等.
+\end{itemize}
+  \item DFP(Device FingerPrint: 设备指纹) 算法: （1）重构设备指纹系统指标体系；（2）特征工程优化与重造；（3）优化以及调整模型参数；（4）调整模型结构；（5）算法工程实现；（6）设备指纹算法系统在测试环境（POC）中，准确率达100\%。
+  \item 游戏防代充模型：（1）数据统计分析，确定代充欺诈判断规则，为数据打标；（2）特征工程；（3）以Logistics Regression算法为基础，构建防代充模型；（3）模型的F2-score 95\%， 同时为该公司减少5\%坏账率。
 \end{itemize}
 \end{onehalfspacing}
 
@@ -65,10 +94,10 @@
 \role{数据挖掘工程师}{}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 用户行为分析，对用户进行差异化定价
-  \item 品牌溢价分析，最大限度榨取品牌价值	  
-  \item 根据酒店产品的售卖进度和库存之间的关系，动态调整酒店产品价格；在定价策略执行阶段，酒店收益每月能提高了8\%
-  \item 产量预测，用Xgboost，构建产量预测模型，并筛选出有用的因子；产量预测结果，直接指导业务部门将如何与酒店谈合作，降低公司从酒店方面拿客房的成本
+  \item 用户行为模型：（1）分析用户价格尾数（0，4，5，9）的敏感性；（2）A/B test实验：将部分房型价格尾号调整为0，4，5，9；（3）实验结果是实验组比对照组提高了1\%。
+  \item 品牌溢价模型：（1）构造马甲房型，并且保证自营与马甲之间的差价，实现收益与产量最大化，通过做A/B test，得到不同房型的最优价差；在最优价差下，酒店收益提高了8\%左右的收益。
+  \item 自动调价模型：（1）分析酒店产品的售卖进度和库存之间的关系，动态调整酒店产品价格；（2）在定价策略执行阶段，酒店收益每月能提高了6\%左右。
+  \item 产量预测模型：（1）用Xgboost，构建产量预测模型，并筛选出有用的因子；（2）产量预测结果，直接指导业务部门将如何与酒店谈合作，降低公司从酒店方面拿客房的成本
 \end{itemize}
 \end{onehalfspacing}
 
@@ -79,48 +108,56 @@
 %  \item main contribution
 %\end{itemize}
 
-\section{\faUsers\ 项目经验}
-\datedsubsection{\textbf{反欺诈咨询项目}}{上海行邑科技有限公司(2017.10--2018.01)}
-\role{项目角色：负责人}{}
-项目介绍：上海某国企征信公司（甲方）计划开发平台征信数据，为平台内p2p、现金贷、小额贷款公司提供反欺诈服务。由我司进行反欺诈数据挖掘服务的可行性研究，
-论证该平台数据能够用于反欺诈，能够开发出相应的反欺诈服务产品。论证内容主要有：1）数据质量是否能够支撑数据反欺诈服务；2）评分卡模型可行性；
-3）图挖掘模型可行性，论证是否能够选取合适字段，构造网络
-\\[2pt]
-\begin{onehalfspacing}
-主要子项目如下：
-  \begin{itemize}
-     \item 数据清洗与融合分析
-     \item 数据质量评估	     
-     \item 标注样本数据
-     \item 特征工程
-     \item 图挖掘或网络挖掘: 构建异构网络、同构网络；在同构网络上，应用PageRank算法；构建网络的一度、二度特征
-     \item 构建基于Logistic Regression的评分卡模型
-  \end{itemize}
-\end{onehalfspacing}
+% \section{\faUsers\ 项目经验}
+% \datedsubsection{\textbf{反欺诈咨询项目}}{上海行邑科技有限公司(2017.10--2018.01)}
+% \role{项目角色：负责人}{}
+% 项目介绍：上海某国企征信公司（甲方）计划开发平台征信数据，为平台内p2p、现金贷、小额贷款公司提供反欺诈服务。由我司进行反欺诈数据挖掘服务的可行性研究，
+% 论证该平台数据能够用于反欺诈，能够开发出相应的反欺诈服务产品。论证内容主要有：1）数据质量是否能够支撑数据反欺诈服务；2）评分卡模型可行性；
+% 3）图挖掘模型可行性，论证是否能够选取合适字段，构造网络
+% \\[2pt]
+% \begin{onehalfspacing}
+% 主要子项目如下：
+%   \begin{itemize}
+%      \item 数据清洗与融合分析
+%      \item 数据质量评估	     
+%      \item 标注样本数据
+%      \item 特征工程
+%      \item 图挖掘或网络挖掘: 构建异构网络、同构网络；在同构网络上，应用PageRank算法；构建网络的一度、二度特征
+%      \item 应用社团挖掘算法Louvain算法，挖掘社团	     
+%      \item 构建基于Logistic Regression的评分卡模型
+%   \end{itemize}
+% \end{onehalfspacing}
 
-项目通过甲方企业的中期验收以及最终项目验收.
-\datedsubsection{\textbf{关联图谱系统项目}}{自研项目(2018.10--现在)}
-\role{项目角色：拥有者及负责人}{}
-项目介绍：
-关联图谱基于图数据库建立关系网络图，是一种可视化的智能分析产品。通过数据抽取和转换，图计算引擎对数据进行查询和分析，
-实现秒级数据运算和数据可视化，并以图谱的形式展示给用户的图形分析工具。用户可以基于已建好的图谱进行查询、分析和探索。
-从功能上，分为图分析和图计算。图分析主要基于图数据库（janusgraph），提供在线实时分析；图计算利用分布式计算框架（Spark GraphX），计算全图
-的PageRank和社团，同时计算节点的一度特征、二度特征计算。
-\\[2pt]
-\begin{onehalfspacing}
-主要子模块如下：
-\begin{itemize}
-  \item 数据集成：开发图生成协议，适配用户数据.
-  \item 在线分析模块：基于图数据库，进行在线实时分析.
-  \item 离线分析模块:用Spark GraphX 图计算：主要包括社团发现，PageRank；用hive进行预计算，统计图特征.    
-  \item 系统管理模块：用户管理、权限管理等.
-\end{itemize}
-\end{onehalfspacing}
+% 项目通过甲方企业的中期验收以及最终项目验收.
+% \datedsubsection{\textbf{关联图谱系统项目}}{自研项目(2018.10--现在)}
+% \role{项目角色：负责人}{}
+% 项目介绍：
+% 关联图谱基于图数据库建立关系网络图，是一种可视化的智能分析产品。通过数据抽取和转换，图计算引擎对数据进行查询和分析，
+% 实现秒级数据运算和数据可视化，并以图谱的形式展示给用户的图形分析工具。用户可以基于已建好的图谱进行查询、分析和探索。
+% 从功能上，分为图分析和图计算。图分析主要基于图数据库（janusgraph），提供在线实时分析；图计算利用分布式计算框架（Spark GraphX），计算全图
+% 的PageRank和社团，同时计算节点的一度特征、二度特征计算。
+% \\[2pt]
+% \begin{onehalfspacing}
+% 主要子模块如下：
+% \begin{itemize}
+%   \item 数据集成：开发图生成协议，适配用户数据.
+%   \item 在线分析模块：基于图数据库，进行在线实时分析.
+%   \item 离线分析模块:用Spark GraphX 图计算：主要包括社团发现(Louvain算法)，PageRank；用hive进行预计算，统计图特征.    
+%   \item 系统管理模块：用户管理、权限管理等.
+% \end{itemize}
+% \end{onehalfspacing}
 
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 编程语言: HQL(Hive SQL)/SQL, Python(Numpy,Scipy,Matplotlib,Seaborn, Pandas), R, Scala/Java, Go, C++/C.
+   \item 编程语言(按熟悉程度从高到低排序)
+     \begin{itemize}
+      \item 大数据分析：HQL(Hive SQL)/SQL
+      \item 数据分析与模型分析：Python(Numpy,Scipy,Matplotlib,Seaborn, Pandas), R
+      \item 大数据算法实现：Scala/Java(Spark应用程序)
+      \item Web服务：Go
+      \item 其他：C/C++      
+     \end{itemize}		     
   \item 熟悉机器学习算法，监督学习：LASSO，LAR，Logistic Regression，朴素贝叶斯，决策树，随机森林，KNN，SVM，Xgboost, 神经网络；无监督学习：K-Means, PCA，GMM(Gaussian Mixture Model)，HMM(Hidden Markov Model), 层次聚类，异常监测；时间序列分析等
   \item 熟悉关系型数据库: SQL Server 2008, Mysql, No-sql: MongoDB, 图数据库: Neo4j, janusgraph, hugegraph, 内存数据库: Redis	  
   \item 熟悉分布式计算，熟练分析平台Hadoop，Spark
